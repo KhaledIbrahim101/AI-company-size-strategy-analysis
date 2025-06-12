@@ -13,6 +13,8 @@
       
 ## 📥 Data Pipeline
 
+![Workflow Flowchart](scripts/workflow.png)
+
 1. **Parsing Step**  
    - `sec_parser.py`: download 10‑K filings from SEC.  
    - `yahoo_finance_parser.py`: fetch financial data (MarketCap, P/E, etc.) from Yahoo Finance.
