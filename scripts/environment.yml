@@ -1,0 +1,14 @@
+name: mba-thesis
+dependencies:
+  - python=3.10
+  - requests
+  - beautifulsoup4
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - networkx
+  - yfinance
+  - nltk
+  - pip
+  - pip:
+      - transformers
