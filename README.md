@@ -3,12 +3,13 @@
 **Objective:** Map the relationship between company size and long‑term strategies using AI on SEC 10‑K filings and financial data.
 
 **Folder Structure:**
-   /data:
-      Zero-Shot Company Label Scores: Contains strategic labels scores of each company.
-      Yahoo Finance Dataset: Contains company size metrics like revenues, market cap and number of employees.
-      Clustering Assignments: Contains assignments of clusters to companies.
-      Hybrid_DBSCSN_Cluster_AssignmentS: Contains refined assignments of DBSCAN algorithm
-      Full Results: Contains the merged full results of the data pipeline.
+   - data:
+      -  Zero-Shot Company Label Scores: Contains strategic labels scores of each company.
+      -  Yahoo Finance Dataset: Contains company size metrics like revenues, market cap and number of employees.
+      -  Clustering Assignments: Contains assignments of clusters to companies.
+      -  Hybrid_DBSCSN_Cluster_AssignmentS: Contains refined assignments of DBSCAN algorithm
+      -  Full Results: Contains the merged full results of the data pipeline.
+   - scripts: explained in data pipeline section
       
 ## 📥 Data Pipeline
 
@@ -33,25 +34,25 @@
    - `generate_decision_tree.py`: build a decision tree to explain cluster assignments.
 
 ## ⚙️ Setup
-pip install -r requirements.txt
+-  pip install -r requirements.txt
 
 ### Conda
-conda env create -f environment.yml
-conda activate mba-thesis
+-  conda env create -f environment.yml
+-  conda activate mba-thesis
 
 ## 🚀 Usage
-Run the workflow in sequence:
-python scripts/sec_parser.py
-python scripts/yahoo_finance_parser.py
-python scripts/merge_yahoo_and_10k.py
-python scripts/zero_shot_classifier.py
-python scripts/pca_and_clustering.py
-python scripts/dbscan_kmeans_hybrid.py
-python scripts/generate_knowledge_graphs.py
-python scripts/generate_decision_tree.py
+-  Run the workflow in sequence:
+   -  python scripts/sec_parser.py
+   -  python scripts/yahoo_finance_parser.py
+   -  python scripts/merge_yahoo_and_10k.py
+   -  python scripts/zero_shot_classifier.py
+   -  python scripts/pca_and_clustering.py
+   -  python scripts/dbscan_kmeans_hybrid.py
+   -  python scripts/generate_knowledge_graphs.py
+   -  python scripts/generate_decision_tree.py
 
 ## 📦 Outputs
-data/*.csv – Intermediate and final datasets
-data/kg_outputs/*.png – Knowledge graphs
-decision_tree*.png/.dot/.txt – Decision tree visualizations
+-  data/*.csv – Intermediate and final datasets
+-  data/kg_outputs/*.png – Knowledge graphs
+-  decision_tree*.png/.dot/.txt – Decision tree visualizations
 
